@@ -1,0 +1,28 @@
+﻿@using MVCStock.Models.Entity
+@model List<Categories>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Kategori Id</th>
+        <th>Kategori Adı</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    <tbody>
+        @foreach(var category in Model)
+            {
+        <tr>
+            <td>@category.Id</td>
+            <td>@category.CategoryName</td>
+            <td><a href="/Category/Delete/@category.Id" class="btn btn-danger">SİL</a></td>
+            <td><a href="/Category/Update/@category.Id" class="btn btn-success">GÜNCELLE</a></td>
+        </tr>
+            }
+    </tbody>
+</table>
+<a href="/Category/NewCategory/" class="btn btn-primary">YENİ KATEGORİ EKLE</a>
+
