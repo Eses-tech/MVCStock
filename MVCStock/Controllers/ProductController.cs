@@ -16,5 +16,17 @@ namespace MVCStock.Controllers
             var result = db.Products.ToList();
             return View(result);
         }
+        [HttpGet]
+        public ActionResult NewProduct()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult NewProduct(Products p1)
+        {
+            db.Products.Add(p1);
+            db.SaveChanges();
+            return View();
+        }
     }
 }

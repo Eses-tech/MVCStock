@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "NewProduct";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div>
+        <label>ÜRÜN AD</label>
+        <input type="text" class="form-control" name="ProductName" />
+    </div>
+    <div>
+        <label>ÜRÜN MARKA</label>
+        <input type="text" class="form-control" name="Brand" />
+    </div>
+    <div>
+        <label>ÜRÜN KATEGORİ</label>
+        <input type="text" class="form-control" name="ProductCategoryId" />
+    </div>
+    <div>
+        <label>ÜRÜN STOK</label>
+        <input type="text" class="form-control" name="UnitsInStock" />
+    </div>
+    <div>
+        <label>ÜRÜN FİYAT</label>
+        <input type="text" class="form-control" name="UnitPrice" />
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-info">ÜRÜN EKLE</button>
+    </div>
+</form>
+
